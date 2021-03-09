@@ -6,8 +6,9 @@ namespace AnalyticsCore
     {
         public static IApplicationBuilder UseAnalyticsCore(this IApplicationBuilder builder, IDataStore storeProvider)
         {
-            //register middleware here
+            builder.UseMiddleware<RequestLoggerMiddleware>(storeProvider);
             return builder;
         }
+      
     }
 }
