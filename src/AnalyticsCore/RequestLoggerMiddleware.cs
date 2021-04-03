@@ -21,12 +21,10 @@ namespace AnalyticsCore
             {
                 Browser = context.Request.Headers["User-Agent"],
                 HttpMethod = context.Request.Method,
-                IPAddress = "",
-                OperationSystem =context.GetOS(),
+                IPAddress = context.Connection.RemoteIpAddress.ToString(),
+                OperationSystem = context.GetOS(),
                 Referer = context.Request.Headers["Referer"]
             });
-
-
         }
     }
 }
