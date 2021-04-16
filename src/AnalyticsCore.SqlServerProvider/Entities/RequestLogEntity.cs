@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AnalyticsCore.SqlServerProvider.Entities
+namespace Logmug.SqlServerProvider.Entities
 {
     public class RequestLogEntity
     {

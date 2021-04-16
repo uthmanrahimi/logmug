@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace AnalyticsCore
+namespace Logmug
 {
     public static class ExtensionMethods
     {
@@ -9,6 +9,6 @@ namespace AnalyticsCore
             builder.UseMiddleware<RequestLoggerMiddleware>(storeProvider);
             return builder;
         }
-      
+
     }
 }

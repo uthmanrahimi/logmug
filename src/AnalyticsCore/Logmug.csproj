@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Description>Simple middleware to logs all incoming requests into database- based on .NET5</Description>
+    <Copyright />
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/uthmanrahimi/logmug</RepositoryUrl>
+    <PackageTags>Logs, ssa, middleware, Analytics</PackageTags>
+    <PackageId>logmug</PackageId>
+    <Authors>Uthman Rahimi</Authors>
+    <Product>logmug</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

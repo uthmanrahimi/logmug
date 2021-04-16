@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>logmug.SqlServer</PackageId>
+    <Authors>Uthman Rahimi</Authors>
+    <Product>logmug.SqlServerProvider</Product>
+    <Description>SqlServer Provider for LogMug library</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/uthmanrahimi/logmug</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnalyticsCore\AnalyticsCore.csproj" />
+    <ProjectReference Include="..\AnalyticsCore\Logmug.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,12 @@
-﻿using AnalyticsCore.SqlServerProvider.Entities;
-using AnalyticsCore.SqlServerProvider.Persistence;
-using AutoMapper;
+﻿using AutoMapper;
+
+using Logmug.SqlServerProvider.Entities;
+using Logmug.SqlServerProvider.Persistence;
+
 using System;
 using System.Threading.Tasks;
 
-namespace AnalyticsCore.SqlServerProvider
+namespace Logmug.SqlServerProvider
 {
     public class SqlServerStoreProvider : IDataStore
     {
@@ -20,7 +22,7 @@ namespace AnalyticsCore.SqlServerProvider
             });
 
             _mapper = config.CreateMapper();
-        
+
         }
         public SqlServerStoreProvider(string connectionString)
         {

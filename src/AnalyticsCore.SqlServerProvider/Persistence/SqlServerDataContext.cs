@@ -1,7 +1,8 @@
-﻿using AnalyticsCore.SqlServerProvider.Entities;
+﻿using Logmug.SqlServerProvider.Entities;
+
 using Microsoft.EntityFrameworkCore;
 
-namespace AnalyticsCore.SqlServerProvider.Persistence
+namespace Logmug.SqlServerProvider.Persistence
 {
     public class SqlServerDataContext : DbContext
     {
@@ -21,7 +22,7 @@ namespace AnalyticsCore.SqlServerProvider.Persistence
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<RequestLogEntity>().ToTable(_tableName)
-                                                   .HasKey(x=>x.Id);
+                                                   .HasKey(x => x.Id);
         }
 
 

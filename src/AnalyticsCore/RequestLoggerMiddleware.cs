@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
+
 using System.Threading.Tasks;
 
-namespace AnalyticsCore
+namespace Logmug
 {
     public class RequestLoggerMiddleware
     {

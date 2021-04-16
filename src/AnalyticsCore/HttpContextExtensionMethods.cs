@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
+
 using System;
 
-namespace AnalyticsCore
+namespace Logmug
 {
     public static class HttpContextExtensionMethods
     {

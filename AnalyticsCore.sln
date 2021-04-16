@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{35391274-1C2A-4665-BBBA-214FFE8665FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnalyticsCore", "src\AnalyticsCore\AnalyticsCore.csproj", "{0CB2AA59-28ED-485C-BBD0-3EC95F6CF5EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logmug", "src\AnalyticsCore\Logmug.csproj", "{0CB2AA59-28ED-485C-BBD0-3EC95F6CF5EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnalyticsCore.SqlServerProvider", "src\AnalyticsCore.SqlServerProvider\AnalyticsCore.SqlServerProvider.csproj", "{11D01234-E2D1-4211-AF66-0578715DF72D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logmug.SqlServerProvider", "src\AnalyticsCore.SqlServerProvider\Logmug.SqlServerProvider.csproj", "{11D01234-E2D1-4211-AF66-0578715DF72D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{258AE0EB-CDBA-4588-AAEC-8EAAC5E37EED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsCore.SqlServerSample", "samples\AnalyticsCore.SqlServerSample\AnalyticsCore.SqlServerSample.csproj", "{E2F3AB0C-66E0-4596-AEB9-12F07FB7D64B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logmug.SqlServerSample", "samples\AnalyticsCore.SqlServerSample\Logmug.SqlServerSample.csproj", "{E2F3AB0C-66E0-4596-AEB9-12F07FB7D64B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,18 +1,12 @@
+using Logmug.SqlServerProvider;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AnalyticsCore;
-using AnalyticsCore.SqlServerSample;
-using AnalyticsCore.SqlServerProvider;
 
-namespace AnalyticsCore.SqlServerSample
+namespace Logmug.SqlServerSample
 {
     public class Startup
     {
@@ -47,7 +41,7 @@ namespace AnalyticsCore.SqlServerSample
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAnalyticsCore(new SqlServerStoreProvider("Data Source=.;Initial Catalog=CheckLogDB;user id=sa;password=1;MultipleActiveResultSets=True;"));
+            app.UseAnalyticsCore(new SqlServerStoreProvider("Data Source=.;Initial Catalog=CheckLogDB;Integrated security=true;MultipleActiveResultSets=True;"));
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

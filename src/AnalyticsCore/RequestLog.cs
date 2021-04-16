@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AnalyticsCore
+﻿namespace Logmug
 {
     public class RequestLog
     {
