@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnalyticsCore\Logmug.csproj" />
+    <ProjectReference Include="..\Logmug\Logmug.csproj" />
   </ItemGroup>
 
 </Project>
