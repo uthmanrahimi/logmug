@@ -41,7 +41,7 @@ namespace Logmug.SqlServerSample
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAnalyticsCore(new SqlServerStoreProvider("Data Source=.;Initial Catalog=CheckLogDB;Integrated security=true;MultipleActiveResultSets=True;"));
+            app.UseLogmug(new SqlServerStoreProvider("Data Source=.;Initial Catalog=CheckLogDB;Integrated security=true;MultipleActiveResultSets=True;"));
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
