@@ -11,7 +11,7 @@ namespace Logmug.SqlServerProvider
     public class SqlServerStoreProvider : IDataStore
     {
         private readonly string _connectionString;
-        private readonly string _tableName = "RequestLog";
+        private  string _tableName = "RequestLog";
         private static readonly IMapper _mapper;
         static SqlServerStoreProvider()
         {
@@ -27,6 +27,12 @@ namespace Logmug.SqlServerProvider
         public SqlServerStoreProvider(string connectionString)
         {
             _connectionString = connectionString;
+        }
+
+        public SqlServerStoreProvider TableName(string tableName)
+        {
+            _tableName = tableName;
+            return this;
         }
 
         private SqlServerDataContext GetDbContext()

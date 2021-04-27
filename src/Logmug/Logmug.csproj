@@ -11,6 +11,8 @@
     <PackageId>logmug</PackageId>
     <Authors>Uthman Rahimi</Authors>
     <Product>logmug</Product>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -8,6 +8,7 @@
     <Description>SqlServer Provider for LogMug library</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/uthmanrahimi/logmug</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
