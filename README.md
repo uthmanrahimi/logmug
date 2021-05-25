@@ -1,6 +1,6 @@
 # # Logmug
 
-**Logmug** is a small middleware based on **.NET5** which helps developers to logs all incoming requets to their applications into a filestorage.
+**Logmug** is a small middleware based on **.NET5** which helps developers to logs all incoming requets to their applications into a datastorage.
 
 - Righ now the only provider which is supported is **SqlServer**.
 - next provider is mongodb
