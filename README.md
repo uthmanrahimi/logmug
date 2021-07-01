@@ -1,10 +1,13 @@
+
 # # Logmug
 
 **Logmug** is a small middleware based on **.NET5** which helps developers to logs all incoming requets to their applications into a datastorage.
 
-- Righ now the only provider which is supported is **SqlServer**.
-- next provider is mongodb
+**Avaiable Providers**
 
+ - SQLServer
+ - SQLite
+ - MongoDB (coming soon)
 
 # How to use it
 
@@ -19,3 +22,7 @@
 
     app.UseLogmug(new SqlServerStoreProvider("your connectionstring"));
 
+## Customization
+If you don't like default table name in each provider, you can use your own name. To do this, you can set your own name while you are regesting **logmug** middleware  like below:
+
+    app.UseLogmug(new SqlServerStoreProvider("your connectionstring").TableName("MyTable"));
