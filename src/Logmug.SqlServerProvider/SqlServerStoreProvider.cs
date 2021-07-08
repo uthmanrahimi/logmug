@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-
+﻿
 using Logmug.SqlServerProvider.Entities;
 using Logmug.SqlServerProvider.Persistence;
 
@@ -11,19 +10,8 @@ namespace Logmug.SqlServerProvider
     public class SqlServerStoreProvider : IDataStore
     {
         private readonly string _connectionString;
-        private  string _tableName = "RequestLog";
-        private static readonly IMapper _mapper;
-        static SqlServerStoreProvider()
-        {
-            var config = new MapperConfiguration(cf =>
-            {
-                cf.CreateMap<RequestLog, RequestLogEntity>()
-                    .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(d => DateTime.Now));
-            });
-
-            _mapper = config.CreateMapper();
-
-        }
+        private string _tableName = "RequestLog";
+     
         public SqlServerStoreProvider(string connectionString)
         {
             _connectionString = connectionString;
@@ -46,7 +34,7 @@ namespace Logmug.SqlServerProvider
         {
             using (var context = GetDbContext())
             {
-                var log = _mapper.Map<RequestLogEntity>(model);
+                var log = Map(model);
                 context.RequestLogs.Add(log);
                 context.SaveChanges();
             }
@@ -57,11 +45,24 @@ namespace Logmug.SqlServerProvider
         {
             using (var context = GetDbContext())
             {
-                var log = _mapper.Map<RequestLogEntity>(model);
+                var log =Map(model);
                 await context.RequestLogs.AddAsync(log);
                 await context.SaveChangesAsync();
             }
 
+        }
+
+        private RequestLogEntity Map(RequestLog model)
+        {
+            return new RequestLogEntity
+            {
+                Browser = model.Browser,
+                HttpMethod = model.HttpMethod,
+                IPAddress = model.IPAddress,
+                OperationSystem = model.OperationSystem,
+                Referer = model.Referer,
+                Timestamp = DateTime.Now
+            };
         }
     }
 }
